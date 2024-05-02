@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribute Data</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ff6f61; /* Coral color */
+            color: #333; /* Dark text color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column; /* Align items in a column */
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff; /* White text color */
+            margin-top: 20px; /* Add some space above the heading */
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Adjust the width as needed */
+            text-align: left;
+            margin: 20px;
+            display: flex;
+            flex-direction: column; /* Align items in a column */
+            overflow: auto; /* Add scroll if content exceeds container */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        select,
+        input[type="radio"] {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #ff6f61; /* Coral color */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Contribute Data</h1>
+
+    <form action="submit_data.php" method="post">
+        <label for="response">Did you get a response from the employer? *</label><br>
+        <input type="radio" id="yesResponse" name="response" value="Yes" required>
+        <label for="yesResponse">Yes</label>
+        <input type="radio" id="noResponse" name="response" value="No" required>
+        <label for="noResponse">No</label><br>
+
+        <label for="responseTime">If you got a response, how long did it take? *</label><br>
+        <select id="responseTime" name="responseTime" required>
+            <option value="1 day">1 day</option>
+            <option value="2-6 days">2-6 days</option>
+            <option value="A week">A week</option>
+            <option value="Two weeks">Two weeks</option>
+            <option value="More than two weeks">More than two weeks</option>
+            <option value="Other">Other</option>
+        </select><br>
+
+        <label for="interview">Did you get an interview? *</label><br>
+        <input type="radio" id="yesInterview" name="interview" value="Yes" required>
+        <label for="yesInterview">Yes</label>
+        <input type="radio" id="noInterview" name="interview" value="No" required>
+        <label for="noInterview">No</label><br>
+
+        <label for="job">Did you get the job? *</label><br>
+        <input type="radio" id="yesJob" name="job" value="Yes" required>
+        <label for="yesJob">Yes</label>
+        <input type="radio" id="noJob" name="job" value="No" required>
+        <label for="noJob">No</label><br>
+
+        <label for="experience">Rate your experience with the employer *</label><br>
+        <input type="radio" id="one" name="experience" value="1" required>
+        <label for="one">1</label>
+        <input type="radio" id="two" name="experience" value="2" required>
+        <label for="two">2</label>
+        <input type="radio" id="three" name="experience" value="3" required>
+        <label for="three">3</label>
+        <input type="radio" id="four" name="experience" value="4" required>
+        <label for="four">4</label>
+        <input type="radio" id="five" name="experience" value="5" required>
+        <label for="five">5</label><br>
+
+        <button type="submit">Submit</button>
+      
+    </form>
+  <form action="Software Engineer CID&A Scotiabank.html">
+      <button> Back to Job Posting 
+          <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/job-advertising-3240836-2701655.png?f=webp" height="30px" alt="Job Posting Icon">
+      </button>
+  </form>
+</body>
+
+</html>

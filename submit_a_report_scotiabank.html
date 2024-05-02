@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a problem: </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .form-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: #ff6f61; /* Coral color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fff; /* White text */
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+            color: #fff; /* White text */
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .button {
+            font-size: 20px;
+            background-color: red; /* Dark Coral color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px; /* Add margin at the top */
+        }
+
+        .button:hover {
+            background-color: dark red; /* Darker shade on hover */
+        }
+
+        button {
+            font-size: 16px;
+            background-color: red; 
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            color: white;
+            margin-top: 20px; /* Add margin at the top */
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: dark red; /* Darker shade on hover */
+        }
+
+        img {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <div class="form-container">
+        <h1>Submit a Problem: </h1>
+        <form id="dataForm">
+            <label> What is your problem? </label><br>
+            <input type="radio" name="choice" value="Option 1"> Promised an interview but it was cancelled <br>
+            <input type="radio" name="choice" value="Option 2"> Laid off shortly after the job <br>
+            <input type="radio" name="choice" value="Option 3"> Promised the job but the employer found someone else <br>
+          <input type="radio" name="choice" value="Option 4"> Interviewer was disrepsectful <br>
+          <input type="radio" name="choice" value="Option 5"> Inappropriate questions or comments <br>
+          <input type="radio" name="choice" value="Option 6"> Actual job did not match job description <br>
+            <input class="button" type="submit" value="Submit">
+        </form>
+        <form action="Software Engineer CID&A Scotiabank.html">
+            <button> Back to Job Posting 
+                <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/job-advertising-3240836-2701655.png?f=webp" height="30px" alt="Job Posting Icon">
+            </button>
+        </form>
+    </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      var form = document.getElementById("dataForm");
+
+      var optionCounts = {
+          "Promised an interview but it was cancelled": 0,
+          "Laid off shortly after the job": 0,
+          "Promised the job but the employer found someone else": 0,
+          "Interviewer was disrespectful": 0,
+          "Inappropriate questions or comments": 0,
+          "Actual job did not match job description": 0
+      };
+
+      form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var selectedOption = document.querySelector('input[name="choice"]:checked');
+
+          if (selectedOption) {
+              // Increment the count by 1
+              optionCounts[selectedOption.value]++;
+              redirectToOriginalPage(optionCounts);
+          } else {
+              alert("Please select a problem option.");
+          }
+      });
+
+      function redirectToOriginalPage(data) {
+          var dataString = encodeURIComponent(JSON.stringify(data));
+          window.location.href = "Software_Engineer_CID&A_Scotiabank.html?data=" + dataString;
+      }
+  });
+
+</script>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
